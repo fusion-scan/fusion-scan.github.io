@@ -14,6 +14,8 @@
 <p>
 
 <br clear=all>
+
+<!--
 <a name="oss"></a>
 <table border=0 hspace=4 cellspacing=2 width="100%" cellpadding=3>
 <tr bgcolor="#e0e0e8">
@@ -27,16 +29,19 @@ We scanned and contributed patches to many popular projects.</p><br>
 <center>
 <img src="/static/all.jpg" width="90%" /><br /><br>
 </center>
+-->
+
 
 <!--confirmed bugs-->
 <br clear=all>
+
+<!--
 <a name="cbr"></a>
 <table border=0 hspace=4 cellspacing=2 width="100%" cellpadding=3>
 <tr bgcolor="#e0e0e8">
 <td width="100%"><nobr>
 <b><font face="helvetica">Confirmed Bug Reports</font></b>
 (102 reports)
-<!-- 
 <label>&nbsp; Filter by Bug Type:&nbsp;<select onchange="filter_confirmed_bugs()" id="filter_bug_type">
 <option value="ALL">ALL</option>
 
@@ -145,10 +150,11 @@ We scanned and contributed patches to many popular projects.</p><br>
 <option value="z3">z3</option>
 
 </select></label>
--->
 </nobr></td>
 </tr>
 </table>
+-->
+
 <ul style="list-style-type: none;" id="confirmed_UL">
 
 <li projname="amazon-s3" bugtype="362">
@@ -256,7 +262,7 @@ We scanned and contributed patches to many popular projects.</p><br>
 <li projname="bento4" bugtype="121">
 <div style="float: left; height: 150px; margin-right: 1cm;">
 
-<div style="height: 150px;width: 150px;background: #eee;text-align: center;line-height: 150px;font-size: 100px;">B</div>
+<img src="/static/bento4.jpg" width="150px"/>
 
 </div>
 <div style="width: 1000px">
@@ -274,7 +280,7 @@ We scanned and contributed patches to many popular projects.</p><br>
 <li projname="bento4" bugtype="476">
 <div style="float: left; height: 150px; margin-right: 1cm;">
 
-<div style="height: 150px;width: 150px;background: #eee;text-align: center;line-height: 150px;font-size: 100px;">B</div>
+<img src="/static/bento4.jpg" width="150px"/>
 
 </div>
 <div style="width: 1000px">
@@ -845,6 +851,23 @@ for (Cell kv : kvs) { ... }</p>
 <br clear=all><br>
 </li>
 
+<li projname="libdnet" bugtype="476">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+
+<div style="height: 150px;width: 150px;background: #eee;text-align: center;line-height: 150px;font-size: 100px;">L</div>
+
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/476.html">CWE-476: Null Pointer Dereference</a> |
+<a href="sorry.html", target="_blank">Report Link</a>
+<br><br>
+<p>A potential null pointer dereference bug is at "blob/master/test/dnet/fw.c#L109"</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
 <li projname="libcork" bugtype="476">
 <div style="float: left; height: 150px; margin-right: 1cm;">
 
@@ -900,7 +923,7 @@ for (Cell kv : kvs) { ... }</p>
 <li projname="libjpeg" bugtype="401">
 <div style="float: left; height: 150px; margin-right: 1cm;">
 
-<div style="height: 150px;width: 150px;background: #eee;text-align: center;line-height: 150px;font-size: 100px;">L</div>
+<img src="/static/libjpeg.png" width="150px"/>
 
 </div>
 <div style="width: 1000px">
@@ -918,7 +941,7 @@ for (Cell kv : kvs) { ... }</p>
 <li projname="libsass" bugtype="401">
 <div style="float: left; height: 150px; margin-right: 1cm;">
 
-<div style="height: 150px;width: 150px;background: #eee;text-align: center;line-height: 150px;font-size: 100px;">L</div>
+<img src="/static/libsass.png" width="150px"/>
 
 </div>
 <div style="width: 1000px">
@@ -1810,7 +1833,7 @@ Similar problem</p>
 <li projname="vim" bugtype="476">
 <div style="float: left; height: 150px; margin-right: 1cm;">
 
-<div style="height: 150px;width: 150px;background: #eee;text-align: center;line-height: 150px;font-size: 100px;">V</div>
+<img src="/static/vim.png" width="150px"/>
 
 </div>
 <div style="width: 1000px">
@@ -1828,7 +1851,7 @@ Similar problem</p>
 <li projname="vmware" bugtype="476">
 <div style="float: left; height: 150px; margin-right: 1cm;">
 
-<div style="height: 150px;width: 150px;background: #eee;text-align: center;line-height: 150px;font-size: 100px;">V</div>
+<img src="/static/vmware.png" width="150px"/>
 
 </div>
 <div style="width: 1000px">
@@ -1915,7 +1938,7 @@ I've uploaded a screenshot of the leak trace.</p>
 <li projname="z3" bugtype="362">
 <div style="float: left; height: 150px; margin-right: 1cm;">
 
-<div style="height: 150px;width: 150px;background: #eee;text-align: center;line-height: 150px;font-size: 100px;">Z</div>
+<img src="/static/z3.jpg" width="150px"/>
 
 </div>
 <div style="width: 1000px">
@@ -1985,7 +2008,15 @@ img.setAttribute("src", "/static/down.png")
 }
 }
 
+function countItems(listID){
+var ul = document.getElementById(listID);
+var i=0, itemCount =0;
+while(ul.getElementsByTagName('li') [i++]) itemCount++;
+document.write(itemCount);
+}
+
 </script>
 
+<b>Total: <script> countItems('confirmed_UL')</script> confirmed reports.</b>
 </BODY>
 </html>
