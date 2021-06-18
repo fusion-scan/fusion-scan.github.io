@@ -9,7 +9,7 @@
 <font face="helvetica">
 <center>
 <h2>Fusion and Pinpoint Scan - Static Analysis</h2>
-<p>This is an incomplete list collecting a part of bugs reported by Fusion and Pinpoint Scan</p>
+<p>This is an incomplete list collecting a part of bugs reported by Fusion and Pinpoint Scan (Total: <b id='total'>200</b> Bugs)</p>
 </center>
 <p>
 
@@ -1797,15 +1797,17 @@ img.setAttribute("src", "/static/down.png")
 }
 }
 
+
 function countItems(listID){
-var ul = document.getElementById(listID);
-var i=0, itemCount =0;
-while(ul.getElementsByTagName('li') [i++]) itemCount++;
-document.write(itemCount);
+    var ul = document.getElementById(listID);
+    var i=0, itemCount =0;
+    while(ul.getElementsByTagName('li') [i++]) itemCount++;
+
+    var total = document.getElementById("total");
+    total.textContent = itemCount;
 }
+countItems('confirmed_UL')
 
 </script>
-
-<b>Total: <script> countItems('confirmed_UL')</script> confirmed reports.</b>
 </BODY>
 </html>
