@@ -1,7 +1,7 @@
 <html>
 
 <head>
-<title>Fusion Scan - Static Analysis</title>
+<title>Fusion and Pinpoint Scan - Static Analysis</title>
 </head>
 
 <BODY TEXT="#000000" BGCOLOR="#ffffff" LINK="#005bb7" VLINK="#005bb7">
@@ -9,14 +9,74 @@
 <font face="helvetica">
 <center>
 <h2>Fusion Scan - Static Analysis</h2>
-<p>This is an incomplete list collecting a part of bugs reported by Fusion Scan and confirmed by the developers</p>
+<p>This is an incomplete list collecting a part of bugs reported by Fusion and Pinpoint Scan</p>
 </center>
 <p>
 
 <br clear=all>
-
 <hr>
+<h3>Related Papers</h3>
 
+<ul style="text-align:justify; text-justify:inter-ideograph; margin-right: 5mm">
+	<li style="margin-bottom: 10px;"><a
+		href="https://pldi21.sigplan.org/home">PLDI'21</a>: <a
+		href="https://qingkaishi.github.io/public_pdfs/PLDI21-Fusion.pdf">Path-Sensitive Sparse Analysis without
+		Path Conditions</a><br />
+		Qingkai Shi, Peisen Yao, Rongxin Wu, Charles Zhang<br />
+		The 42nd ACM SIGPLAN Conference on Programming Language Design and Implementation<br />
+	</li>
+	
+	<li style="margin-bottom: 10px;"><a
+		href="https://pldi21.sigplan.org/home">PLDI'21</a>: <a
+		href="https://home.cse.ust.hk/~charlesz/canary.pdf">Canary: Practical Static Detection of Inter-Thread Value-Flow Bugs</a><br />
+		Yuandao Cai, Peisen Yao, and Charles Zhang<br />
+		The 42nd ACM SIGPLAN Conference on Programming Language Design and Implementation<br />
+	</li>
+
+	<li style="margin-bottom: 10px;"><a
+		href="https://conf.researchr.org/home/issta-2020">ISSTA'20</a>: <a
+		href="https://qingkaishi.github.io/public_pdfs/ISSTA20-Trident.pdf">Fast Bit-Vector Satisfiability</a><br />
+		Peisen Yao, Qingkai Shi, Heqing Huang, Charles Zhang<br />
+		The 29th ACM SIGSOFT International Symposium on Software Testing and Analysis<br />
+	</li>
+	
+	<li style="margin-bottom: 10px;"><a
+		href="https://conf.researchr.org/home/icse-2020">ICSE'20</a>: <a
+		href="https://qingkaishi.github.io/public_pdfs/ICSE2020a.pdf">Pipelining Bottom-up Data Flow Analysis</a><br />
+		Qingkai Shi, Charles Zhang<br />
+		The 42nd ACM/IEEE International Conference on Software Engineering<br />
+	</li>
+
+	<li style="margin-bottom: 10px;"><a
+		href="https://conf.researchr.org/home/icse-2020">ICSE'20</a>: <a
+		href="https://qingkaishi.github.io/public_pdfs/ICSE2020b.pdf">Conquering the Extensional Scalability Problem
+		for Value-Flow Analysis Frameworks</a><br />
+		Qingkai Shi, Rongxin Wu, Gang Fan, Charles Zhang<br />
+		The 42nd ACM/IEEE International Conference on Software Engineering<br />
+	</li>
+
+	<li style="margin-bottom: 10px;"><a
+		href="https://conf.researchr.org/home/icse-2019">ICSE'19</a>: <a
+		href="https://qingkaishi.github.io/public_pdfs/ICSE2019.pdf">Smoke: Scalable Path-Sensitive Memory Leak
+		Detection for Millions of Lines of Code</a><br />
+		Gang Fan, Rongxin Wu, Qingkai Shi, Xiao Xiao, Jinguo Zhou,
+		Charles Zhang<br />
+		The 41st ACM/IEEE International Conference on Software Engineering<br />
+	</li>
+
+	<li style="margin-bottom: 10px;"><a
+		href="https://pldi18.sigplan.org/home">PLDI'18</a>: <a
+		href="https://qingkaishi.github.io/public_pdfs/PLDI2018.pdf">Pinpoint: Fast and Precise Sparse Value Flow
+		Analysis for Million Lines of Code</a><br />
+		Qingkai Shi, Xiao Xiao, Rongxin Wu, Jinguo Zhou, Gang Fan,
+		Charles Zhang<br />
+		The 39th ACM SIGPLAN Conference on Programming Language Design and Implementation<br />
+	</li>
+</ul>
+	
+<!--cve list-->
+<hr>
+<br clear=all>
 <h3>CVE List</h3>
 
 <ul style="text-align:justify; text-justify:inter-ideograph; margin-right: 5mm">
@@ -68,10 +128,10 @@
 	of an invalid progressive JPEG image containing incorrect width and height
 	values in the image header.</li>
 </ul>
-<hr>
 
 
 <!--confirmed bugs-->
+<hr>
 <br clear=all>
 <h3>Bug List</h3>
 
