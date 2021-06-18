@@ -46,9 +46,8 @@ An example:
 create a pull request by adding the following item, which simply includes the link of the cve and its description:
 
 ```
-<li><a
-	href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14739">CVE-2017–14739</a>:
-	ImageMagick 7.0.7–4 mishandles failed memory allocation, which allows remote
-	attackers to cause a denial of service.
+<li>
+	<a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14739">CVE-2017–14739</a>:
+	ImageMagick 7.0.7–4 mishandles failed memory allocation, which allows remote attackers to cause a denial of service.
 </li>
 ```
