@@ -1760,54 +1760,54 @@ I've uploaded a screenshot of the leak trace.</p>
 
 </ul>
 
+<center id="pagination">
+<!--pagination-->
+</center>
+
 <script>
-function filter_confirmed_bugs() {
-var bt = document.getElementById("filter_bug_type");
-var bt_user = bt.options[bt.selectedIndex].value;
+function goPage(pageNo) {
+    var ul = document.getElementById('confirmed_UL');
+    var i = 0, itemCount = 0;
+    var allItems = ul.getElementsByTagName('li');
+    while(allItems[i++]) itemCount++;
 
-var pn = document.getElementById("filter_project_name");
-var pn_user = pn.options[pn.selectedIndex].value;
+    startIdx = (pageNo - 1) * 15;
+    for (i = 0; i < itemCount; i++) {
+        if (i >= startIdx && i < startIdx + 15) {
+            allItems[i].style.display = ""
+        } else {
+            allItems[i].style.display = "none"
+        }
+    }
 
-var ul = document.getElementById("confirmed_UL");
-var li = ul.getElementsByTagName("li");
-var i;
-for (i = 0; i < li.length; i++) {
-if ((bt_user == "ALL" || li[i].getAttribute("bugtype") == bt_user)
-&& (pn_user == "ALL" || li[i].getAttribute("projname") == pn_user)) {
-li[i].style.display = "";
-} else {
-li[i].style.display = "none";
-}
-}
-}
+    var pp = document.getElementById("pagination");
+    var totalPages = Math.ceil(itemCount / 15);
+    pp.innerHTML = ''
+    for (i = 1; i < totalPages + 1; i++) {
+        var suffix = ' | '
+        if (i == totalPages) {
+            suffix = ''
+        }
 
-function show_or_hide_list(ulid, imgid) {
-var ul = document.getElementById(ulid);
-if (ul.style.display == "none") {
-ul.style.display = ""
-} else {
-ul.style.display = "none"
-}
-
-var img = document.getElementById(imgid);
-if (img.getAttribute("src") == "/static/down.png") {
-img.setAttribute("src", "/static/right.png")
-} else {
-img.setAttribute("src", "/static/down.png")
-}
+        if (pageNo == i) {
+            pp.innerHTML += i + suffix
+        } else {
+            pp.innerHTML += '<a href=\'/#\' onclick=\'goPage(' + i + ');return false;\'>' + i + '</a>' + suffix
+        }
+    }
 }
 
-
-function countItems(listID){
-    var ul = document.getElementById(listID);
-    var i=0, itemCount =0;
-    while(ul.getElementsByTagName('li') [i++]) itemCount++;
+function countItems(){
+    var ul = document.getElementById('confirmed_UL');
+    var i = 0, itemCount = 0;
+    var allItems = ul.getElementsByTagName('li');
+    while(allItems[i++]) itemCount++;
 
     var total = document.getElementById("total");
     total.textContent = itemCount;
 }
-countItems('confirmed_UL')
-
+countItems()
+goPage(1)
 </script>
 </BODY>
 </html>
