@@ -131,7 +131,7 @@
 <!--confirmed bugs-->
 <hr>
 <br clear=all>
-<h3>Bug List</h3>
+<h3 id="buglist">Bug List</h3>
 
 <ul style="list-style-type: none;" id="confirmed_UL">
 
@@ -1792,7 +1792,7 @@ function goPage(pageNo) {
         if (pageNo == i) {
             pp.innerHTML += i + suffix
         } else {
-            pp.innerHTML += '<a href=\'/#\' onclick=\'goPage(' + i + ');return false;\'>' + i + '</a>' + suffix
+            pp.innerHTML += '<a href=\'#buglist\' onclick=\'goPage(' + i + ');\'>' + i + '</a>' + suffix
         }
     }
 }
