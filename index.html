@@ -1961,13 +1961,30 @@ I've uploaded a screenshot of the leak trace.</p>
 </center>
 
 <script>
-function goPage(pageNo) {
-    var ul = document.getElementById('confirmed_UL');
-    var i = 0, itemCount = 0;
-    var allItems = ul.getElementsByTagName('li');
-    while(allItems[i++]) itemCount++;
+// count items
+var ul = document.getElementById('confirmed_UL');
+var i = 0, itemCount = 0;
+var allItems = ul.getElementsByTagName('li');
+var allItemsArray = [];
+while(allItems[i++]) { itemCount++; allItemsArray.push(allItems[i - 1]); }
+var total = document.getElementById("total");
+total.textContent = itemCount;
 
-    startIdx = (pageNo - 1) * 15;
+// sort items
+allItemsArray.sort(function(a, b) {
+    var projA = a.getAttribute('projname');
+    var projB = b.getAttribute('projname');
+    return (projA < projB) ? -1 : (projA > projB) ? 1 : 0;
+});
+ul.innerHTML = ''
+for (i = 0; i < itemCount; i++) {
+	ul.appendChild(allItemsArray[i]);
+}
+allItems = ul.getElementsByTagName('li');
+
+// pagination
+function goPage(pageNo) {
+    var startIdx = (pageNo - 1) * 15;
     for (i = 0; i < itemCount; i++) {
         if (i >= startIdx && i < startIdx + 15) {
             allItems[i].style.display = ""
@@ -1993,16 +2010,6 @@ function goPage(pageNo) {
     }
 }
 
-function countItems(){
-    var ul = document.getElementById('confirmed_UL');
-    var i = 0, itemCount = 0;
-    var allItems = ul.getElementsByTagName('li');
-    while(allItems[i++]) itemCount++;
-
-    var total = document.getElementById("total");
-    total.textContent = itemCount;
-}
-countItems()
 goPage(1)
 </script>
 </BODY>
