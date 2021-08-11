@@ -11,9 +11,13 @@
 <br>
 <h2>Fusion and Pinpoint Scan - Static Analysis</h2>
 <p>This is an incomplete list collecting a part of bugs reported by Fusion and Pinpoint Scan (Total: <b id='total'>200</b> Bugs)</p>
+<br>
+<a href="#" onclick="display('papers');">[Related Papers]</a> | 
+<a href="#" onclick="display('cves');">[CVE Identifiers]</a> | 
+<a href="#" onclick="display('bugs');">[Discovered Bugs]</a> 
 </center>
 
-
+<div id="papers" style="display: none;">
 <br clear=all>
 <hr>
 <h3>Related Papers</h3>
@@ -86,10 +90,12 @@
 		The 39th ACM SIGPLAN Conference on Programming Language Design and Implementation<br />
 	</li>
 </ul>
+</div>
 	
 <!--cve list-->
-<hr>
+<div id="cves" style="display: none;">
 <br clear=all>
+<hr>
 <h3>CVE List</h3>
 
 <ul style="text-align:justify; text-justify:inter-ideograph; margin-right: 5mm">
@@ -141,11 +147,13 @@
 	of an invalid progressive JPEG image containing incorrect width and height
 	values in the image header.</li>
 </ul>
+</div>
 
 
 <!--confirmed bugs-->
-<hr>
+<div id="bugs" style="display: none;">
 <br clear=all>
+<hr>
 <h3 id="buglist">Bug List</h3>
 
 <ul style="list-style-type: none;" id="confirmed_UL">
@@ -1973,6 +1981,7 @@ I've uploaded a screenshot of the leak trace.</p>
 <center id="pagination">
 <!--pagination-->
 </center>
+</div>
 	
 <br clear=all><br>
 <hr>
@@ -2026,12 +2035,26 @@ function goPage(pageNo) {
         if (pageNo == i) {
             pp.innerHTML += i + suffix
         } else {
-            pp.innerHTML += '<a href=\'#buglist\' onclick=\'goPage(' + i + ');\'>' + i + '</a>' + suffix
+            pp.innerHTML += '<a href=\'#\' onclick=\'goPage(' + i + ');\'>' + i + '</a>' + suffix
         }
     }
 }
 
-goPage(1)
+goPage(1);
+	
+var lis = ['papers', 'cves', 'bugs'];
+function display(id) {
+	var li = document.getElementById(id);
+    li.style.display = "block";
+
+	for (i = 0; i < lis.length; ++i) {
+		if (lis[i] != id) {
+			var li = document.getElementById(lis[i]);
+			li.style.display = "none";
+		}
+	}
+}
+display('papers');
 </script>
 </BODY>
 </html>
