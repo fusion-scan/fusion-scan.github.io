@@ -390,14 +390,14 @@ causes a direct copy to NULL pointer dereference, leading to a denial of service
 <a href="https://cwe.mitre.org/data/definitions/401.html">CWE-401: Memory Leak</a> |
 <a href="https://bugs.chromium.org/p/v8/issues/list?can=2&amp;q=reporter%3Afan.gang.cn%40gmail.com", target="_blank">Report Link</a>
 <br><br>
-<p>Comment #5 on issue 7434 by bugdroid1@chromium.org: A memory leak in handler-outside.cc:158<br>
+<!-- <p>Comment #5 on issue 7434 by bugdroid1@chromium.org: A memory leak in handler-outside.cc:158<br>
 <a href="https://bugs.chromium.org/p/v8/issues/detail?id=7434#c5">https://bugs.chromium.org/p/v8/issues/detail?id=7434#c5</a></p>
 <p>The following revision refers to this bug:<br>
 <a href="https://chromium.googlesource.com/v8/v8.git/+/ef8dae3f3db59a47c4fc6d994d5621806a47f579">https://chromium.googlesource.com/v8/v8.git/+/ef8dae3f3db59a47c4fc6d994d5621806a47f579</a></p>
 <p>commit ef8dae3f3db59a47c4fc6d994d5621806a47f579<br>
 Author: Eric Holk <a href="mailto:eholk@chromium.org">eholk@chromium.org</a><br>
 Date: Wed Feb 21 00:15:19 2018</p>
-<p>[wasm] [trap handler] do not leak memory on failure path</p>
+<p>[wasm] [trap handler] do not leak memory on failure path</p> -->
 <p>There were two failure paths where the CodeProtectionInfo object would not be<br>
 freed. This adds a free() on those paths to prevent a memory leak.</p>
 
@@ -552,7 +552,7 @@ freed. This adds a free() on those paths to prevent a memory leak.</p>
 <p>Actual results:</p>
 <p>File: dom/media/encoder/VP8TrackEncoder.cpp:254</p>
 <p>videoData allocated on line 279 is not freed when the function returns on line 286/293/300/306. Since videodata is considered a big data, it may cause severe memory leaks.</p>
-<p>I've uploaded a screenshot with source code and comments for a better description.</p>
+<!-- <p>I've uploaded a screenshot with source code and comments for a better description.</p> -->
 
 <br><br>
 </div>
@@ -570,7 +570,7 @@ freed. This adds a free() on those paths to prevent a memory leak.</p>
 <p>Actual results:</p>
 <p>File: media/libvpx/libvpx/vp8/vp8_cx_iface.c:594</p>
 <p>The memory shared_mem_loc allocated on line 587 is leaked when the program takes the true branch on line 594. It is a rare case, but better fix it.</p>
-<p>I've uploaded a screenshot with source code and comments for a better description.</p>
+<!-- <p>I've uploaded a screenshot with source code and comments for a better description.</p> -->
 
 <br><br>
 </div>
@@ -588,7 +588,7 @@ freed. This adds a free() on those paths to prevent a memory leak.</p>
 <p>Actual results:</p>
 <p>File mozilla-unified/media/mtransport/nr_timer.cpp:216</p>
 <p>The allocated variable callback on line 210 is leaked when the program returns on line 217.</p>
-<p>I've uploaded a screenshot with source code and comments for a better description.</p>
+<!-- <p>I've uploaded a screenshot with source code and comments for a better description.</p> -->
 
 <br><br>
 </div>
@@ -623,9 +623,9 @@ freed. This adds a free() on those paths to prevent a memory leak.</p>
 <p>Actual results:</p>
 <p>"adapter" allocated on line 603 is leaked when mGMPLoader-&gt;load returns false on line 606.</p>
 <p>File: dom/media/gmp/GMPChild.cpp:555</p>
-<p>Expected results:</p>
+<!-- <p>Expected results:</p>
 <p>delete adapter before exiting.</p>
-
+ -->
 <br><br>
 </div>
 <br clear=all><br>
@@ -642,7 +642,7 @@ freed. This adds a free() on those paths to prevent a memory leak.</p>
 <p>Actual results:</p>
 <p>File mozilla-unified/media/mtransport/nr_timer.cpp:216</p>
 <p>The allocated variable callback on line 210 is leaked when the program returns on line 217.</p>
-<p>I've uploaded a screenshot with source code and comments for a better description.</p>
+<!-- <p>I've uploaded a screenshot with source code and comments for a better description.</p> -->
 
 <br><br>
 </div>
@@ -776,9 +776,9 @@ List&lt;Cell&gt; kvs = rs.listCells();<br>
 for (Cell kv : kvs) { ... }</p>
 <p>Given empty rs, kvs shall be null instead of an empty list, leading to potential null pointer exception</p>
 <p>(org.apache.hadoop.hbase.client.Result.java Line #244 and org.apache.hadoop.hbase.rest.TableScanResource Line #95</p>
-<p>Linkage to the code is here:</p>
+<!-- <p>Linkage to the code is here:</p>
 <p><a href="https://github.com/apache/hbase/blob/9e9b347d667e1fc6165c9f8ae5ae7052147e8895/hbase-client/src/main/java/org/apache/hadoop/hbase/client/Result.java#L244">https://github.com/apache/hbase/blob/9e9b347d667e1fc6165c9f8ae5ae7052147e8895/hbase-client/src/main/java/org/apache/hadoop/hbase/client/Result.java#L244</a></p>
-<p><a href="https://github.com/apache/hbase/blob/9e9b347d667e1fc6165c9f8ae5ae7052147e8895/hbase-rest/src/main/java/org/apache/hadoop/hbase/rest/TableScanResource.java#L95">https://github.com/apache/hbase/blob/9e9b347d667e1fc6165c9f8ae5ae7052147e8895/hbase-rest/src/main/java/org/apache/hadoop/hbase/rest/TableScanResource.java#L95</a></p>
+<p><a href="https://github.com/apache/hbase/blob/9e9b347d667e1fc6165c9f8ae5ae7052147e8895/hbase-rest/src/main/java/org/apache/hadoop/hbase/rest/TableScanResource.java#L95">https://github.com/apache/hbase/blob/9e9b347d667e1fc6165c9f8ae5ae7052147e8895/hbase-rest/src/main/java/org/apache/hadoop/hbase/rest/TableScanResource.java#L95</a></p> -->
 
 <br><br>
 </div>
