@@ -2265,6 +2265,114 @@ I've uploaded a screenshot of the leak trace.</p>
 </li>
 
 
+<li style="display:none" projname="hadoop" bugtype="369">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/box64.png" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+<a href="https://github.com/ptitSeb/box64/issues/60", target="_blank">Report Link</a>
+<br><br>
+<p>An improper locking bug on pthread_mutex_lock(&mutex_mmap) in box64. Multiple calls on the function AllocDynarecMap can lead to a deadlock.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+
+<li style="display:none" projname="hadoop" bugtype="369">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/box86.png" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+<a href="https://github.com/ptitSeb/box86/issues/417", target="_blank">Report Link</a>
+<br><br>
+<p>An improper locking bug on pthread_mutex_lock(&mutex_mmap) in box86. Multiple calls on the function AllocDynarecMap can lead to a deadlock.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+
+<li style="display:none" projname="hadoop" bugtype="369">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/linux.jpeg" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+<a href="https://github.com/axboe/fio/issues/1254", target="_blank">Report Link</a>
+<br><br>
+<p>Double unlocks on pthread_mutex_unlock(&td->io_u_lock) in fio.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+
+<li style="display:none" projname="hadoop" bugtype="369">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/cortx.png" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+<a href="https://github.com/Seagate/cortx-s3server/issues/1037", target="_blank">Report Link</a>
+<br><br>
+<p>An improper locking bug on  pthread_mutex_lock(&pool->lock) in CORTX-S3 Server. Multiple calls on the function mempool_destroy can lead to a deadlock.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+<li style="display:none" projname="hadoop" bugtype="369">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/linux.jpeg" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+<a href="https://github.com/axboe/liburing/issues/379", target="_blank">Report Link</a>
+<br><br>
+<p>An improper locking bug on pthread_mutex_lock(&rd.mutex) in liburing. Multiple calls on the function test can lead to a deadlock.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+<li style="display:none" projname="hadoop" bugtype="369">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/linux.jpeg" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+<a href="https://github.com/axboe/liburing/issues/382", target="_blank">Report Link</a>
+<br><br>
+<p>An improper locking bug on  pthread_mutex_lock(&mutex) in liburing. Multiple calls on the function test can lead to a deadlock.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+<li style="display:none" projname="hadoop" bugtype="369">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/linux.jpeg" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+<a href="https://github.com/axboe/liburing/issues/382", target="_blank">Report Link</a>
+<br><br>
+<p>An improper locking bug on pthread_mutex_lock(&lock) in liburing. It may lead to resource leak and ill performance.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
 
 </ul>
 <center id="pagination">
