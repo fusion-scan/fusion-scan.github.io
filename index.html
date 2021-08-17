@@ -2015,8 +2015,73 @@ I've uploaded a screenshot of the leak trace.</p>
 <br clear=all><br>
 </li>
 
-</ul>
 
+<li style="display:none" projname="hadoop" bugtype="369">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/mercury.png" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+<a href="https://github.com/mercury-hpc/mercury/issues/495", target="_blank">Report Link</a>
+<br><br>
+<p>An improper locking bug on hg_thread_mutex_lock(&NA_MPI_CLASS(na_class)->accept_mutex) in mercury. Multiple calls on the function na_mpi_accept can lead to a deadlock. </p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+<li style="display:none" projname="hadoop" bugtype="369">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/mercury.png" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+<a href="https://github.com/mercury-hpc/mercury/issues/495", target="_blank">Report Link</a>
+<br><br>
+<p>An improper locking bug on hg_thread_mutex_lock(&NA_MPI_CLASS(na_class)->remote_list_mutex) in mercury. Multiple calls on the function na_mpi_progress_unexpected can lead to a deadlock.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+
+
+<li style="display:none" projname="hadoop" bugtype="369">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/mercury.png" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+<a href="https://github.com/mercury-hpc/mercury/issues/495", target="_blank">Report Link</a>
+<br><br>
+<p>An improper locking bug on  hg_thread_mutex_lock(&request->request_class->progress_mutex) in mercury. Multiple calls on the function hg_request_wait can lead to a deadlock.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+
+<li style="display:none" projname="hadoop" bugtype="369">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/mercury.png" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+<a href="https://github.com/mercury-hpc/mercury/issues/495", target="_blank">Report Link</a>
+<br><br>
+<p>An improper locking bug on hg_thread_mutex_lock(&poll_set->lock) in mercury. Multiple calls on the function hg_poll_wait can lead to a deadlock.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+
+
+</ul>
 <center id="pagination">
 <!--pagination-->
 </center>
