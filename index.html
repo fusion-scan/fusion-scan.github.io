@@ -2080,6 +2080,191 @@ I've uploaded a screenshot of the leak trace.</p>
 </li>
 
 
+<li style="display:none" projname="ffmpeg" bugtype="416">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/coturn.jpeg" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/416.html">CWE-416: Use After Free/Double Free</a> |
+<a href="https://github.com/coturn/coturn/issues/600", target="_blank">Report Link</a>
+<br><br>
+<p>A use-after-free bug is detected in coturn on the function write_to_peerchannel.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+<li style="display:none" projname="ffmpeg" bugtype="416">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/coturn.jpeg" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/416.html">CWE-416: Use After Free/Double Free</a> |
+<a href="https://github.com/coturn/coturn/issues/601", target="_blank">Report Link</a>
+<br><br>
+<p>A use-after-free bug is detected in coturn on the function write_client_connection.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+
+<li style="display:none" projname="baidu" bugtype="476">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/lwan.png" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/476.html">CWE-476: Null Pointer Dereference</a> |
+<a href="https://github.com/lpereira/lwan/issues/289", target="_blank">Report Link</a>
+<br><br>
+<p> It is found in lwan and fixed. It occurs due to calling the critical logging function when hash_str_new() fails in parse_listener_prefix().</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+
+<li style="display:none" projname="baidu" bugtype="476">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/coturn.jpeg" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/476.html">CWE-476: Null Pointer Dereference</a> |
+<a href="https://github.com/coturn/coturn/issues/621", target="_blank">Report Link</a>
+<br><br>
+<p> It is found in coturn on the function tcp_client_input_handler_rfc6062data and fixed.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+
+
+<li style="display:none" projname="axel" bugtype="362">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+
+<img src="/static/coturn.jpeg" width="150px"/>
+
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+<a href="https://github.com/coturn/coturn/issues/622", target="_blank">Report Link</a>
+<br><br>
+<p>A data race in coturn on the function general_relay_servers.</a></p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+<li style="display:none" projname="axel" bugtype="362">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+
+<img src="/static/coturn.jpeg" width="150px"/>
+
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+<a href="https://github.com/coturn/coturn/issues/623", target="_blank">Report Link</a>
+<br><br>
+<p>A data race in coturn between the functions set_rtpfile and rollover_logfile.</a></p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+
+
+<li style="display:none" projname="axel" bugtype="362">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+
+<img src="/static/poco.png" width="150px"/>
+
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/755.html">CWE-755: Improper Handling of Exceptional Conditions</a> |
+<a href="https://github.com/pocoproject/poco/issues/3130", target="_blank">Report Link</a>
+<br><br>
+<p>It is found in poco and fixed. The close() is being called before handleLastErrorImpl(), so the call to close will actually change/reset errno and handleLastErrorImpl() will throw the wrong exception.</a></p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+<li style="display:none" projname="baidu" bugtype="476">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/libfreenect.png" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/476.html">CWE-476: Null Pointer Dereference</a> |
+<a href="https://github.com/OpenKinect/libfreenect/issues/627", target="_blank">Report Link</a>
+<br><br>
+<p>  A NULL pointer dereference found in libfreenect on the method freenect_select_subdevices where ctx may be NULL. It is fixed.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+
+
+<li style="display:none" projname="axel" bugtype="362">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+
+<img src="/static/lrzip.png" width="150px"/>
+
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+<a href="https://github.com/ckolivas/lrzip/issues/167", target="_blank">Report Link</a>
+<br><br>
+<p>A race-like bug found in lrzip, which has been fixed.</a></p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+<li style="display:none" projname="axel" bugtype="362">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+
+<img src="/static/lrzip.png" width="150px"/>
+
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+<a href="https://github.com/ckolivas/lrzip/issues/166", target="_blank">Report Link</a>
+<br><br>
+<p>A race-like bug found in lrzip, which has been fixed.</a></p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+
+<li style="display:none" projname="baidu" bugtype="476">
+<div style="float: left; height: 150px; margin-right: 1cm;">
+<img src="/static/openssl.png" width="150px"/>
+</div>
+<div style="width: 1000px">
+<a href="https://cwe.mitre.org/data/definitions/476.html">CWE-476: Null Pointer Dereference</a> |
+<a href="https://github.com/openssl/openssl/issues/13260", target="_blank">Report Link</a>
+<br><br>
+<p>  A NULL pointer dereference on the function afalg_aes_cbc and is fixed.</p>
+
+<br><br>
+</div>
+<br clear=all><br>
+</li>
+
+
 
 </ul>
 <center id="pagination">
