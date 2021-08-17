@@ -767,15 +767,15 @@ freed. This adds a free() on those paths to prevent a memory leak.</p>
 <a href="https://cwe.mitre.org/data/definitions/476.html">CWE-476: Null Pointer Dereference</a> |
 <a href="https://issues.apache.org/jira/browse/HBASE-20340?page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel&amp;focusedCommentId=16498986#comment-16498986", target="_blank">Report Link</a>
 <br><br>
-<p>// org.apache.hadoop.hbase.client.Result.java Line #244<br>
+<!-- <p>// org.apache.hadoop.hbase.client.Result.java Line #244<br>
 public List&lt;Cell&gt; listCells() {<br>
 return isEmpty()? null: Arrays.asList(rawCells());<br>
 }</p>
 <p>// org.apache.hadoop.hbase.rest.TableScanResource Line #95<br>
 List&lt;Cell&gt; kvs = rs.listCells();<br>
-for (Cell kv : kvs) { ... }</p>
+for (Cell kv : kvs) { ... }</p> -->
 <p>Given empty rs, kvs shall be null instead of an empty list, leading to potential null pointer exception</p>
-<p>(org.apache.hadoop.hbase.client.Result.java Line #244 and org.apache.hadoop.hbase.rest.TableScanResource Line #95</p>
+<<!-- p>(org.apache.hadoop.hbase.client.Result.java Line #244 and org.apache.hadoop.hbase.rest.TableScanResource Line #95</p> -->
 <!-- <p>Linkage to the code is here:</p>
 <p><a href="https://github.com/apache/hbase/blob/9e9b347d667e1fc6165c9f8ae5ae7052147e8895/hbase-client/src/main/java/org/apache/hadoop/hbase/client/Result.java#L244">https://github.com/apache/hbase/blob/9e9b347d667e1fc6165c9f8ae5ae7052147e8895/hbase-client/src/main/java/org/apache/hadoop/hbase/client/Result.java#L244</a></p>
 <p><a href="https://github.com/apache/hbase/blob/9e9b347d667e1fc6165c9f8ae5ae7052147e8895/hbase-rest/src/main/java/org/apache/hadoop/hbase/rest/TableScanResource.java#L95">https://github.com/apache/hbase/blob/9e9b347d667e1fc6165c9f8ae5ae7052147e8895/hbase-rest/src/main/java/org/apache/hadoop/hbase/rest/TableScanResource.java#L95</a></p> -->
