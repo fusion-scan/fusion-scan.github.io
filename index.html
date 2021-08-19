@@ -1068,10 +1068,10 @@ for (Cell kv : kvs) { ... }</p> -->
 <a href="https://bugs.mysql.com/?id=89798&amp;edit=2", target="_blank">Report Link</a>
 <br><br>
 <p>There is a potential memory leak defect in mysql-server-mysql-5.5.51/cmd-line-utils/libedit/np/vis.c:436.</p>
-<p>The memory allocated on line 420 is assigned to variable nextra. It is not freed when this function returns to its caller on line 436.</p>
-<p>It is freed on line 439, which implies the developer award the necessity of freeing this memory. The leak on line 436 might be a mistake.</p>
-<p>This report is similar to <a href="https://bugs.mysql.com/bug.php?id=89797&amp;thanks=4">https://bugs.mysql.com/bug.php?id=89797&amp;thanks=4</a>.</p>
-
+<p>The memory allocated on line 420 is assigned to variable nextra. It is not freed when this function returns to its caller on line 436. The leak on line 436 might be a mistake.</p>
+<!-- It is freed on line 439, which implies the developer award the necessity of freeing this memory.  -->
+<!-- <p>This report is similar to <a href="https://bugs.mysql.com/bug.php?id=89797&amp;thanks=4">https://bugs.mysql.com/bug.php?id=89797&amp;thanks=4</a>.</p>
+ -->
 <br><br>
 </div>
 <br clear=all><br>
