@@ -7,6 +7,7 @@
 	<meta name="keywords"
 		content="Qingkai Shi, QingkaiShi, Pinpoint, Fusion, Static Code Analysis, Static Code Analyzer, Program Analysis and Testing">
 	<title>Fusion and Pinpoint Scan - Static Analysis</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body text="#000000" bgcolor="#ffffff" link="#005bb7" vlink="#005bb7">
@@ -20,6 +21,7 @@
 			<a href="#" onclick="display('papers');">[Related Papers]</a> |
 			<a href="#" onclick="display('cves');">[CVE Identifiers]</a> |
 			<a href="#" onclick="display('bugs');">[Discovered Bugs]</a> |
+			<a href="#" onclick="display('statistics');">[Statistics]</a> |
 			<a href="https://qingkaishi.github.io/" target="_blank">[About]</a>
 		</center>
 
@@ -2683,6 +2685,18 @@ for (Cell kv : kvs) { ... }</p> -->
 			</center>
 		</div>
 
+		<div id="statistics" style="display: none;">
+			<br clear="all">
+			<hr>
+			<h3># Discovered Bugs in Each Category</h3>
+			<canvas id="myChart" style="width:100%;max-width:1200px;max-height:400px"></canvas>
+
+			<br clear="all">
+			<hr>
+			<h3># Discovered Bugs in Each Project</h3>
+			<canvas id="myChart2" style="width:100%;max-width:1200px;max-height:400px"></canvas>
+		</div>
+
 		<br clear="all"><br>
 		<hr>
 		<center>
@@ -2697,7 +2711,33 @@ for (Cell kv : kvs) { ... }</p> -->
 			var i = 0, itemCount = 0;
 			var allItems = ul.getElementsByTagName('li');
 			var allItemsArray = [];
-			while (allItems[i++]) { itemCount++; allItemsArray.push(allItems[i - 1]); }
+			var allItemsMap = {}
+			var allItemsMap2 = {}
+			var cweMap = {}
+			while (allItems[i++]) { 
+				itemCount++; 
+				item = allItems[i - 1];
+				allItemsArray.push(item); 
+				
+				key = item.getAttribute('projname');
+				if (key in allItemsMap) {
+					allItemsMap[key] = allItemsMap[key] + 1;
+				} else {
+					allItemsMap[key] = 1;
+				}
+
+				key = item.getAttribute('bugtype');
+				key2 = item.getElementsByTagName('div')[1].getElementsByTagName('a')[0].textContent.replace(/[\n\r]+|[\s]{2,}/g, ' ').trim();
+				if (key2.indexOf(key) == -1) {
+					alert(key)
+				}
+				cweMap[key] = key2
+				if (key in allItemsMap2) {
+					allItemsMap2[key] = allItemsMap2[key] + 1;
+				} else {
+					allItemsMap2[key] = 1;
+				}
+			}
 			var total = document.getElementById("total");
 			total.textContent = itemCount;
 
@@ -2743,7 +2783,7 @@ for (Cell kv : kvs) { ... }</p> -->
 
 			goPage(1);
 
-			var lis = ['papers', 'cves', 'bugs'];
+			var lis = ['papers', 'cves', 'bugs', 'statistics'];
 			function display(id) {
 				var li = document.getElementById(id);
 				li.style.display = "block";
@@ -2756,6 +2796,60 @@ for (Cell kv : kvs) { ... }</p> -->
 				}
 			}
 			display('papers');
+			
+			var xValues = [];
+			var yValues = [];
+			var barColors = [];
+			for(var key in allItemsMap2) {
+				xValues.push(cweMap[key]);
+				yValues.push(allItemsMap2[key]);
+			}
+			new Chart("myChart", {
+				type: "bar",
+				data: {
+				labels: xValues,
+				datasets: [{
+					//backgroundColor: barColors,
+					data: yValues
+				}]
+				},
+				options: {
+					plugins : {
+						legend: {display: false}
+					},
+					scales: {
+						y: {
+							beginAtZero: true
+						}
+					}
+				}
+			});
+			var xValues = [];
+			var yValues = [];
+			var barColors = [];
+			for(var key in allItemsMap) {
+				xValues.push(key);
+				yValues.push(allItemsMap[key]);
+			}
+			new Chart("myChart2", {
+				type: "bar",
+				data: {
+					labels: xValues,
+					datasets: [{
+						data: yValues
+					}]
+				},
+				options: {
+					plugins : {
+						legend: {display: false}
+					},
+					scales: {
+						y: {
+							beginAtZero: true
+						}
+					}
+				}
+			});
 		</script>
 </body>
 
