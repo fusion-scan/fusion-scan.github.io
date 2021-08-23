@@ -2679,6 +2679,240 @@ for (Cell kv : kvs) { ... }</p> -->
 					</div>
 					<br clear="all"><br>
 				</li>
+
+				<li style="display:none" projname="libevent" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/libevent.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/libevent/libevent/issues/1183" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on pthread_mutex_lock(&once_init_lock) in libevent. Multical calls on evthread_use_pthreads_with_flags can lead to a deadlock.</p>
+
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="siege" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/siege.jpeg" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/JoeDog/siege/issues/197" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on pthread_mutex_lock(&timer_mutex) in siege. Multical calls on pthread_usleep_np can lead to a deadlock.</p>
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="haproxy" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/haproxy.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/haproxy/haproxy/issues/1326" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on pthread_mutex_unlock(&init_mutex) in haproxy that is not correctly released before program exit.</p> 
+
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="libfaketime" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/libfaketime.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/wolfcw/libfaketime/issues/340" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on pthread_mutex_lock(&fakeMutex) in libfaketime that is not correctly released before program exit.</p> 
+
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="libfaketime" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/libfaketime.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/wolfcw/libfaketime/issues/340" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on pthread_mutex_lock(&fakeMutex) in libfaketime that is not correctly released before program exit.(The same lock on different program locations)</p> 
+
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="motion" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/motion.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/Motion-Project/motion/issues/1363" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on pthread_mutex_lock(&netcam->mutex) in motion. Multical calls on netcam_cleanup can lead to a deadlock.</p> 
+
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="mpich" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/mpich.jpeg" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/pmodels/mpich/issues/5444" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on  pthread_mutex_lock(&mpi_lock) in mpich that is not correctly released before program exit.</p> 
+
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="likwid" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/likwid.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/RRZE-HPC/likwid/issues/416" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on pthread_mutex_lock(&threadLocks[myCPU]) in likwid. Multical calls on likwid_markerStopRegion can lead to a deadlock.</p> 
+
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="netopeer" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/netopeer.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/CESNET/netopeer2/issues/964" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on pthread_mutex_lock(&stats.lock) in netopeer. Multical calls on ncm_session_add can lead to a deadlock.</p> 
+
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="ibnetconf2" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/ibnetconf2.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/CESNET/libnetconf2/issues/320" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on pthread_mutex_lock(&server_opts.authkey_lock) in libnetconf. Multical calls on _nc_server_ssh_add_authkey can lead to a deadlock.</p> 
+
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="aml" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/aml.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/anlsys/aml/issues/203" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on pthread_mutex_lock(&server_opts.authkey_lock) in aml that can lead to a deadlock .</p> 
+
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="ovis" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/ovis.jpeg" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/ovis-hpc/ovis/issues/772" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on  pthread_mutex_lock(&lset->lock) in ovis. Multical calls on __process_dir_set_info can lead to a deadlock.</p> 
+
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="ovis" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/ovis.jpeg" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/ovis-hpc/ovis/issues/773" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on  pthread_mutex_lock(&x->lock) in ovis. Multical calls on __send_lookup_reply can lead to a deadlock.</p> 
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="axel" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/axel.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/axel-download-accelerator/axel/issues/359" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on  pthread_mutex_lock(&conn->lock) in axel. Multical calls on conn_info can lead to a deadlock.</p> 
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="freeipa" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/freeipa.jpeg" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/389ds/389-ds-base/issues/4836" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on  pthread_mutex_lock(&notify_lock) in 389 server adopted by freeIPA(Red Hat Identify Management System). The bug is easy to understand but existed for 8 months. </p> 
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="postgres-x2" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/postgres-x2.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/postgres-x2/postgres-x2/issues/343" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on  pthread_mutex_lock(&init_mutex) in postgres-x2 that is not correctly released before program exit. </p> 
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="cen64" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/cen64.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/n64dev/cen64/issues/207" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug about re-acquiring the cen64_mutex_lock(&gdb->client_mutex) in cen64. </p> 
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+
 			</ul>
 			<center id="pagination">
 				<!--pagination-->
