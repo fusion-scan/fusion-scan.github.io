@@ -1,6 +1,6 @@
 # fusion-scan.github.io
 
-We collect all bugs/CVE identifiers detected by our static code analysis, Pinpoint and Fusion, in this website.
+We collect the bugs detected by our static code analyzers, Pinpoint and Fusion, in this website.
 
 
 ## Add a new bug into the list
