@@ -2689,12 +2689,16 @@ for (Cell kv : kvs) { ... }</p> -->
 			<br clear="all">
 			<hr>
 			<h3># Discovered Bugs in Each Category</h3>
-			<canvas id="myChart" style="width:100%;max-width:1200px;max-height:400px"></canvas>
+			<center>
+			<canvas id="bugsbycategory" style="width:100%;max-width:1200px;max-height:400px"></canvas>
+			</center>
 
 			<br clear="all">
 			<hr>
 			<h3># Discovered Bugs in Each Project</h3>
-			<canvas id="myChart2" style="width:100%;max-width:1200px;max-height:400px"></canvas>
+			<center>
+			<canvas id="bugsbyproject" style="width:100%;max-width:1200px;max-height:400px"></canvas>
+			</center>
 		</div>
 
 		<br clear="all"><br>
@@ -2711,8 +2715,8 @@ for (Cell kv : kvs) { ... }</p> -->
 			var i = 0, itemCount = 0;
 			var allItems = ul.getElementsByTagName('li');
 			var allItemsArray = [];
-			var allItemsMap = {}
-			var allItemsMap2 = {}
+			var allItemsByProj = {}
+			var allItemsByClass = {}
 			var cweMap = {}
 			while (allItems[i++]) { 
 				itemCount++; 
@@ -2720,10 +2724,10 @@ for (Cell kv : kvs) { ... }</p> -->
 				allItemsArray.push(item); 
 				
 				key = item.getAttribute('projname');
-				if (key in allItemsMap) {
-					allItemsMap[key] = allItemsMap[key] + 1;
+				if (key in allItemsByProj) {
+					allItemsByProj[key] = allItemsByProj[key] + 1;
 				} else {
-					allItemsMap[key] = 1;
+					allItemsByProj[key] = 1;
 				}
 
 				key = item.getAttribute('bugtype');
@@ -2732,10 +2736,10 @@ for (Cell kv : kvs) { ... }</p> -->
 					alert(key)
 				}
 				cweMap[key] = key2
-				if (key in allItemsMap2) {
-					allItemsMap2[key] = allItemsMap2[key] + 1;
+				if (key in allItemsByClass) {
+					allItemsByClass[key] = allItemsByClass[key] + 1;
 				} else {
-					allItemsMap2[key] = 1;
+					allItemsByClass[key] = 1;
 				}
 			}
 			var total = document.getElementById("total");
@@ -2800,11 +2804,11 @@ for (Cell kv : kvs) { ... }</p> -->
 			var xValues = [];
 			var yValues = [];
 			var barColors = [];
-			for(var key in allItemsMap2) {
+			for(var key in allItemsByClass) {
 				xValues.push(cweMap[key]);
-				yValues.push(allItemsMap2[key]);
+				yValues.push(allItemsByClass[key]);
 			}
-			new Chart("myChart", {
+			new Chart("bugsbycategory", {
 				type: "bar",
 				data: {
 				labels: xValues,
@@ -2827,11 +2831,11 @@ for (Cell kv : kvs) { ... }</p> -->
 			var xValues = [];
 			var yValues = [];
 			var barColors = [];
-			for(var key in allItemsMap) {
+			for(var key in allItemsByProj) {
 				xValues.push(key);
-				yValues.push(allItemsMap[key]);
+				yValues.push(allItemsByProj[key]);
 			}
-			new Chart("myChart2", {
+			new Chart("bugsbyproject", {
 				type: "bar",
 				data: {
 					labels: xValues,
