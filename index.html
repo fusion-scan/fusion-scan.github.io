@@ -2912,6 +2912,46 @@ for (Cell kv : kvs) { ... }</p> -->
 					</div>
 					<br clear="all"><br>
 				</li>
+				<li style="display:none" projname="hyperkit" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/hyperkit.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/moby/hyperkit/issues/316" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on  pthread_mutex_lock(&sync.e_mt) in hyperkit that is not correctly released before program exit. The mevent_test.c comes from an external library, so the developers 'd rather avoid carrying patches on top of this bug harmless for most OS. </p> 
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="collectd" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/collectd.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/collectd/collectd/pull/3903" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on  pthread_mutex_lock(&perl_threads->mutex) in collectd that is not correctly released before program exit. </p> 
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="linux" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/linux.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/torvalds/linux/commit/e81e7a533742c30615f8b15390df6525cef96778#diff-a98b89515d9a73216600b6ab9ee44a9a245cb636503c7d8ef733a293604a81f3" , target="_blank">Report Link</a>
+						<br><br>
+						<p>An improper locking bug on  pthread_mutex_lock(&server_started_mtx) in linux that is not correctly if the pthread_create fails and goes to close_server_fd. This has been confirmed and the fixed patches would be merged soon. </p> 
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+
 
 			</ul>
 			<center id="pagination">
