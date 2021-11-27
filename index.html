@@ -310,7 +310,7 @@
 						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
 						<a href="https://github.com/baidu/sofa-pbrpc/issues/203" , target="_blank">Report Link</a>
 						<br><br>
-						<p>a data race in baidu's sofa-pbrpc</p>
+						<p>A data race in baidu's sofa-pbrp.</p>
 
 						<br><br>
 					</div>
@@ -467,7 +467,7 @@ Date: Wed Feb 21 00:15:19 2018</p>
 						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
 						<a href="https://github.com/Eyescale/Lunchbox/issues/315" , target="_blank">Report Link</a>
 						<br><br>
-						<p>a data race in eyescale/lunchbox</p>
+						<p>A data race in eyescale/lunchbox.</p>
 
 						<br><br>
 					</div>
@@ -571,13 +571,12 @@ Date: Wed Feb 21 00:15:19 2018</p>
 					<br clear=all><br>
 				</li>
 
-				<li style="display:none" projname="firefox" bugtype="416">
+				<li style="display:none" projname="firefox" bugtype="362">
 					<div style="float: left; height: 150px; margin-right: 1cm;">
 						<img src="/static/firefox.png" width="150px" />
 					</div>
 					<div style="width: 1000px">
-						<a href="https://cwe.mitre.org/data/definitions/416.html">CWE-416: Use After Free/Double
-							Free</a> |
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
 						<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1387937" , target="_blank">Report Link</a>
 						<br><br>
 						<p>Since the two frees follow each other immediately it's hard to see how an attacker could take
@@ -1774,17 +1773,32 @@ for (Cell kv : kvs) { ... }</p> -->
 					<br clear=all><br>
 				</li>
 
-				<li style="display:none" projname="transmission" bugtype="416">
+				<li style="display:none" projname="transmission" bugtype="362">
 					<div style="float: left; height: 150px; margin-right: 1cm;">
 						<img src="/static/transmission.png" width="150px" />
 					</div>
 					<div style="width: 1000px">
-						<a href="https://cwe.mitre.org/data/definitions/416.html">CWE-416: Use After Free/Double
-							Free</a> |
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
 						<a href="https://github.com/transmission/transmission/issues/188" , target="_blank">Report
 							Link</a>
 						<br><br>
 						<p>In transmission project, a use-after-free which may happen when race condition happens.</p>
+
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+
+				<li style="display:none" projname="transmission" bugtype="362">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/transmission.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+						<a href="https://github.com/cfpp2p/transmission/commit/4c72a16ebc860b71379bf41fe9438ff4033ea59a" , target="_blank">Report
+							Link</a>
+						<br><br>
+						<p>In transmission project, a memory leak which may happen when race condition happens.</p>
 
 						<br><br>
 					</div>
@@ -2514,7 +2528,7 @@ for (Cell kv : kvs) { ... }</p> -->
 					</div>
 					<div style="width: 1000px">
 						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
-						<a href="https://github.com/Seagate/cortx-s3server/issues/1037" , target="_blank">Report
+						<a href="https://github.com/Seagate/cortx-s3server/pull/1041" , target="_blank">Report
 							Link</a>
 						<br><br>
 						<p>An improper locking bug on pthread_mutex_lock(&pool->lock) in CORTX-S3 Server. Multiple calls
@@ -2565,8 +2579,7 @@ for (Cell kv : kvs) { ... }</p> -->
 						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
 						<a href="https://github.com/axboe/liburing/issues/382" , target="_blank">Report Link</a>
 						<br><br>
-						<p>An improper locking bug on pthread_mutex_lock(&lock) in liburing. It may lead to resource
-							leak and ill performance.</p>
+						<p>An improper locking bug on pthread_mutex_lock(&lock) in liburing.</p>
 
 						<br><br>
 					</div>
@@ -2587,7 +2600,7 @@ for (Cell kv : kvs) { ... }</p> -->
 					<br clear="all"><br>
 				</li>
 				
-				<li style="display:none" projname="httpd" bugtype="393">
+				<li style="display:none" projname="wolfssl" bugtype="393">
 					<div style="float: left; height: 150px; margin-right: 1cm;">
 						<img src="/static/wolfssl.png" width="150px" />
 					</div>
@@ -2601,7 +2614,7 @@ for (Cell kv : kvs) { ... }</p> -->
 					<br clear="all"><br>
 				</li>
 
-				<li style="display:none" projname="httpd" bugtype="393">
+				<li style="display:none" projname="apache" bugtype="393">
 					<div style="float: left; height: 150px; margin-right: 1cm;">
 						<img src="/static/apache.png" width="150px" />
 					</div>
@@ -2615,7 +2628,7 @@ for (Cell kv : kvs) { ... }</p> -->
 					<br clear="all"><br>
 				</li>
 
-				<li style="display:none" projname="httpd" bugtype="393">
+				<li style="display:none" projname="apache" bugtype="393">
 					<div style="float: left; height: 150px; margin-right: 1cm;">
 						<img src="/static/apache.png" width="150px" />
 					</div>
@@ -2754,15 +2767,15 @@ for (Cell kv : kvs) { ... }</p> -->
 					</div>
 					<br clear="all"><br>
 				</li>
-				<li style="display:none" projname="mpich" bugtype="667">
+				<li style="display:none" projname="mpich" bugtype="362">
 					<div style="float: left; height: 150px; margin-right: 1cm;">
 						<img src="/static/mpich.jpeg" width="150px" />
 					</div>
 					<div style="width: 1000px">
-						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
-						<a href="https://github.com/pmodels/mpich/issues/5444" , target="_blank">Report Link</a>
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+						<a href="https://github.com/pmodels/mpich/pull/5451" , target="_blank">Report Link</a>
 						<br><br>
-						<p>An improper locking bug on  pthread_mutex_lock(&mpi_lock) in mpich that is not correctly released before program exit.</p> 
+						<p>The exit call in the thread functions have potential thread racing issues and may leave another process hanging.</p> 
 
 						<br><br>
 					</div>
@@ -2796,9 +2809,9 @@ for (Cell kv : kvs) { ... }</p> -->
 					</div>
 					<br clear="all"><br>
 				</li>
-				<li style="display:none" projname="ibnetconf2" bugtype="667">
+				<li style="display:none" projname="libnetconf2" bugtype="667">
 					<div style="float: left; height: 150px; margin-right: 1cm;">
-						<img src="/static/ibnetconf2.png" width="150px" />
+						<img src="/static/libnetconf2.png" width="150px" />
 					</div>
 					<div style="width: 1000px">
 						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
@@ -2818,8 +2831,7 @@ for (Cell kv : kvs) { ... }</p> -->
 						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
 						<a href="https://github.com/anlsys/aml/issues/203" , target="_blank">Report Link</a>
 						<br><br>
-						<p>An improper locking bug on pthread_mutex_lock(&server_opts.authkey_lock) in aml that can lead to a deadlock .</p> 
-
+						<p>A deadlock bug due to cyclic order between workq_lock and doneq_lock.</p> 
 						<br><br>
 					</div>
 					<br clear="all"><br>
@@ -2903,19 +2915,6 @@ for (Cell kv : kvs) { ... }</p> -->
 					</div>
 					<br clear="all"><br>
 				</li>
-				<li style="display:none" projname="hyperkit" bugtype="667">
-					<div style="float: left; height: 150px; margin-right: 1cm;">
-						<img src="/static/hyperkit.png" width="150px" />
-					</div>
-					<div style="width: 1000px">
-						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
-						<a href="https://github.com/moby/hyperkit/issues/316" , target="_blank">Report Link</a>
-						<br><br>
-						<p>An improper locking bug on  pthread_mutex_lock(&sync.e_mt) in hyperkit that is not correctly released before program exit. The mevent_test.c comes from an external library, so the developers 'd rather avoid carrying patches on top of this bug harmless for most OS. </p> 
-						<br><br>
-					</div>
-					<br clear="all"><br>
-				</li>
 				<li style="display:none" projname="collectd" bugtype="667">
 					<div style="float: left; height: 150px; margin-right: 1cm;">
 						<img src="/static/collectd.png" width="150px" />
@@ -2935,9 +2934,9 @@ for (Cell kv : kvs) { ... }</p> -->
 					</div>
 					<div style="width: 1000px">
 						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
-						<a href="https://github.com/torvalds/linux/commit/e81e7a533742c30615f8b15390df6525cef96778#diff-a98b89515d9a73216600b6ab9ee44a9a245cb636503c7d8ef733a293604a81f3" , target="_blank">Report Link</a>
+						<a href="https://github.com/torvalds/linux/commit/47bb27a20d6ea22cd092c1fc2bb4fcecac374838" , target="_blank">Report Link</a>
 						<br><br>
-						<p>An improper locking bug on  pthread_mutex_lock(&server_started_mtx) in linux that is not correctly if the pthread_create fails and goes to close_server_fd. This has been confirmed and the fixed patches would be merged soon. </p> 
+						<p>An improper locking bug on  pthread_mutex_lock(&server_started_mtx) in linux that is not correctly if the pthread_create fails and goes to close_server_fd. </p> 
 						<br><br>
 					</div>
 					<br clear="all"><br>
@@ -2955,6 +2954,465 @@ for (Cell kv : kvs) { ... }</p> -->
 					</div>
 					<br clear="all"><br>
 				</li>
+				<li style="display:none" projname="mongoose-os" bugtype="362">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/mongoose-os.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+						<a href="https://github.com/cesanta/mongoose-os/pull/586" , target="_blank">Report Link</a>
+						<br><br>
+						<p>The lock us->lock seems to guard the variable us->locked. However, the lock is released before accessing us->locked.</p>
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="keepalived" bugtype="362">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/keepalived.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+						<a href="https://github.com/acassen/keepalived/commit/99cdee63def7d7fb109f79e87061688ba70f3bd7" , target="_blank">Report Link</a>
+						<br><br>
+						<p> The lock cond_mutex should guard dbus_startup_completed to make the write operation atomic.</p>
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+					<li style="display:none" projname="keepalived" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/keepalived.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/acassen/keepalived/commit/7245f452fe33de7a026f92279fc9499529c3ffeb" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A communication deadlock bug between the signal (Line 700) and wait sites (Line 996).</p>
+
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="rsyslog" bugtype="362">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/rsyslog.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+						<a href="https://github.com/rsyslog/rsyslog/commit/dc395fec5da011014a15d885286138b4e35468c3" , target="_blank">Report Link</a>
+						<br><br>
+						<p> That code evolved from running on a single thread to running on multiple threads, which introduced data races and so made unreliable.</p>
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="leveldb" bugtype="362">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/leveldb.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+						<a href="https://github.com/google/leveldb/issues/499" , target="_blank">Report Link</a>
+						<br><br>
+						<p> A potential data races when accessing variable stderr in the function PthreadCall.</p>
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="postgresql" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/postgresql.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/postgres/postgres/commit/fa703b317e9d261ffd34bbf5651ea29aff3ff0f0" , target="_blank">Report Link</a>
+						<br><br>
+						<p>On failure the pthread mutex would still be hold with the new connection object listed but free()'d.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="dpdk" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/dpdk.jpg" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="http://patches.dpdk.org/project/dpdk/patch/20211116144923.7342-1-cyeaa@connect.ust.hk/" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A deadlock found in dpdk.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="dpdk" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/dpdk.jpg" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="http://patches.dpdk.org/project/dpdk/patch/20210826185559.107237-1-cyeaa@connect.ust.hk/" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A deadlock found in dpdk.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="ffmpeg" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/ffmpeg.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://trac.ffmpeg.org/ticket/9385#ticket" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A deadlock found in FFmpeg.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="ffmpeg" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/ffmpeg.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://trac.ffmpeg.org/ticket/9386#ticket" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A deadlock found in FFmpeg</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="httpd" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/apache.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/393.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/apache/httpd/commit/9e02e2000cc05754a9c1c9a9aead7ce2cc8ea6ee" , target="_blank">Report Link</a>
+						<br><br>
+						<p>Unlock the accept mutex before exiting (error conditions).</p>
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="libtrace" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/libtrace.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/LibtraceTeam/libtrace/issues/195" , target="_blank">Report Link</a>
+						<br><br>
+						<p>In libtrace, a potential deadlock for the lock b->lock in the libtrace_release_bucket_id method.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="libtrace" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/libtrace.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/LibtraceTeam/libtrace/issues/195" , target="_blank">Report Link</a>
+						<br><br>
+						<p>In libtrace, a potential deadlock for the lock q->lock in the libtrace_deque_push_back method.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="libtrace" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/libtrace.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/LibtraceTeam/libtrace/issues/195" , target="_blank">Report Link</a>
+						<br><br>
+						<p>In libtrace, a potential deadlock for the lock q->lock in the libtrace_deque_push_front method.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="libtrace" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/libtrace.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/LibtraceTeam/libtrace/issues/195" , target="_blank">Report Link</a>
+						<br><br>
+						<p>In libtrace, a potential deadlock for the lock v->lock in the libtrace_vector_push_back method.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="libtrace" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/libtrace.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/LibtraceTeam/libtrace/issues/195" , target="_blank">Report Link</a>
+						<br><br>
+						<p>In libtrace, a potential deadlock for the lock mutex in the trace_bpf_compile method.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="libtrace" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/libtrace.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/LibtraceTeam/libtrace/issues/195" , target="_blank">Report Link</a>
+						<br><br>
+						<p>In libtrace, a potential deadlock for the lock trace->libtrace_lock in the hasher_entry method.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="libtrace" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/libtrace.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/LibtraceTeam/libtrace/issues/195" , target="_blank">Report Link</a>
+						<br><br>
+						<p>In libtrace, a potential deadlock for the lock libtrace->libtrace_lock in the trace_pstart method.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="wolfssl" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/wolfssl.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/wolfSSL/wolfssl/pull/4378" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A potential deadlock on the lock caam.ring.jr_lock.</p>
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="xen" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/xen.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://lists.xenproject.org/archives/html/xen-devel/2021-10/msg00582.html"
+							, target="_blank">Report Link</a>
+						<br><br>
+						<p>There was an unreleased lock in the read_watch_internal() with no risk in reality (fixed).</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="pjsip" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/pjsip.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/pjsip/pjproject/pull/2853/files" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A deadlock found in PJSIP with CVE ID assigned in pjmedia/src/pjmedia-codec/and_aud_mediacodec.cpp.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="pjsip" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/pjsip.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/pjsip/pjproject/pull/2853/files" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A deadlock found in PJSIP with CVE ID assigned in pjmedia/src/pjmedia-codec/ipp_codecs.c.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="pjsip" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/pjsip.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/pjsip/pjproject/pull/2853/files" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A deadlock found in PJSIP with CVE ID assigned in pjmedia/src/pjmedia-codec/opus.c.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="pjsip" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/pjsip.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/pjsip/pjproject/pull/2853/files" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A deadlock found in PJSIP with CVE ID assigned in pjmedia/src/pjmedia-codec/passthrough.c.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="pjsip" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/pjsip.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/pjsip/pjproject/pull/2853/files" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A deadlock found in PJSIP with CVE ID assigned in pjmedia/src/pjmedia-codec/speex_codec.c.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="pjsip" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/pjsip.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/pjsip/pjproject/pull/2853/files" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A deadlock (vid_conf->mutex in pjmedia_vid_conf_add_port method) found in PJSIP with CVE ID assigned in pjmedia/src/pjmedia/vid_conf.c.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="pjsip" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/pjsip.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/pjsip/pjproject/pull/2853/files" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A deadlock (vid_conf->mutex in pjmedia_vid_conf_remove_port) found in PJSIP with CVE ID assigned in pjmedia/src/pjmedia/vid_conf.c.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="pjsip" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/pjsip.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/pjsip/pjproject/pull/2853/files" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A deadlock (vid_conf->mutex in pjmedia_vid_conf_connect_port) found in PJSIP with CVE ID assigned in pjmedia/src/pjmedia/vid_conf.c.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="pjsip" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/pjsip.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/pjsip/pjproject/pull/2853/files" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A deadlock (vid_conf->mutex in pjmedia_vid_conf_disconnect_port) found in PJSIP with CVE ID assigned in pjmedia/src/pjmedia/vid_conf.c.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="openssl" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/openssl.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a>
+						|
+						<a href="https://github.com/openssl/openssl/pull/16849" , target="_blank">Report Link</a>
+						<br><br>
+						<p>In OpenSSL, the lock pk->lock is not released correctly in the function evp_keymgmt_util_export_to_provider.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+								<li style="display:none" projname="mariadb" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/mariadb.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://jira.mariadb.org/browse/MDEV-26561?filter=-2" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A found missing release lock thd->ctrl_mutex.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="mariadb" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/mariadb.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://jira.mariadb.org/browse/MDEV-26561?filter=-2" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A missing release previous mutexes of the other threads.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="mariadb" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/mariadb.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://jira.mariadb.org/browse/MDEV-26574?filter=-2" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A missing release lock stream_ctxt->mutex.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="mariadb" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/mariadb.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://jira.mariadb.org/browse/MDEV-26556?filter=-2" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A missing release lock lock_bigbuffer.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="mariadb" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/mariadb.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://jira.mariadb.org/browse/MDEV-26558?filter=-2" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A cyclic-dependence deadlock between locks ctxt->mutex and list_lock.</p>
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+
 
 
 			</ul>
