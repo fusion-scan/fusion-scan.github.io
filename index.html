@@ -310,7 +310,7 @@
 						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
 						<a href="https://github.com/baidu/sofa-pbrpc/issues/203" , target="_blank">Report Link</a>
 						<br><br>
-						<p>a data race in baidu's sofa-pbrpc</p>
+						<p>A data race in baidu's sofa-pbrp.</p>
 
 						<br><br>
 					</div>
@@ -467,7 +467,7 @@ Date: Wed Feb 21 00:15:19 2018</p>
 						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
 						<a href="https://github.com/Eyescale/Lunchbox/issues/315" , target="_blank">Report Link</a>
 						<br><br>
-						<p>a data race in eyescale/lunchbox</p>
+						<p>A data race in eyescale/lunchbox.</p>
 
 						<br><br>
 					</div>
@@ -571,13 +571,12 @@ Date: Wed Feb 21 00:15:19 2018</p>
 					<br clear=all><br>
 				</li>
 
-				<li style="display:none" projname="firefox" bugtype="416">
+				<li style="display:none" projname="firefox" bugtype="362">
 					<div style="float: left; height: 150px; margin-right: 1cm;">
 						<img src="/static/firefox.png" width="150px" />
 					</div>
 					<div style="width: 1000px">
-						<a href="https://cwe.mitre.org/data/definitions/416.html">CWE-416: Use After Free/Double
-							Free</a> |
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
 						<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1387937" , target="_blank">Report Link</a>
 						<br><br>
 						<p>Since the two frees follow each other immediately it's hard to see how an attacker could take
@@ -1774,17 +1773,32 @@ for (Cell kv : kvs) { ... }</p> -->
 					<br clear=all><br>
 				</li>
 
-				<li style="display:none" projname="transmission" bugtype="416">
+				<li style="display:none" projname="transmission" bugtype="362">
 					<div style="float: left; height: 150px; margin-right: 1cm;">
 						<img src="/static/transmission.png" width="150px" />
 					</div>
 					<div style="width: 1000px">
-						<a href="https://cwe.mitre.org/data/definitions/416.html">CWE-416: Use After Free/Double
-							Free</a> |
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
 						<a href="https://github.com/transmission/transmission/issues/188" , target="_blank">Report
 							Link</a>
 						<br><br>
 						<p>In transmission project, a use-after-free which may happen when race condition happens.</p>
+
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+
+				<li style="display:none" projname="transmission" bugtype="362">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/transmission.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+						<a href="https://github.com/cfpp2p/transmission/commit/4c72a16ebc860b71379bf41fe9438ff4033ea59a" , target="_blank">Report
+							Link</a>
+						<br><br>
+						<p>In transmission project, a memory leak which may happen when race condition happens.</p>
 
 						<br><br>
 					</div>
@@ -2587,7 +2601,7 @@ for (Cell kv : kvs) { ... }</p> -->
 					<br clear="all"><br>
 				</li>
 				
-				<li style="display:none" projname="httpd" bugtype="393">
+				<li style="display:none" projname="wolfssl" bugtype="393">
 					<div style="float: left; height: 150px; margin-right: 1cm;">
 						<img src="/static/wolfssl.png" width="150px" />
 					</div>
@@ -2754,15 +2768,15 @@ for (Cell kv : kvs) { ... }</p> -->
 					</div>
 					<br clear="all"><br>
 				</li>
-				<li style="display:none" projname="mpich" bugtype="667">
+				<li style="display:none" projname="mpich" bugtype="362">
 					<div style="float: left; height: 150px; margin-right: 1cm;">
 						<img src="/static/mpich.jpeg" width="150px" />
 					</div>
 					<div style="width: 1000px">
-						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
-						<a href="https://github.com/pmodels/mpich/issues/5444" , target="_blank">Report Link</a>
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-362: Data Race</a> |
+						<a href="https://github.com/pmodels/mpich/pull/5451" , target="_blank">Report Link</a>
 						<br><br>
-						<p>An improper locking bug on  pthread_mutex_lock(&mpi_lock) in mpich that is not correctly released before program exit.</p> 
+						<p>The exit call in the thread functions have potential thread racing issues and may leave another process hanging.</p> 
 
 						<br><br>
 					</div>
@@ -2955,6 +2969,73 @@ for (Cell kv : kvs) { ... }</p> -->
 					</div>
 					<br clear="all"><br>
 				</li>
+				<li style="display:none" projname="mongoose-os" bugtype="362">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/mongoose-os.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+						<a href="https://github.com/cesanta/mongoose-os/pull/586" , target="_blank">Report Link</a>
+						<br><br>
+						<p>The lock us->lock seems to guard the variable us->locked. However, the lock is released before accessing us->locked.</p>
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="keepalived" bugtype="362">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/keepalived.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+						<a href="https://github.com/acassen/keepalived/commit/99cdee63def7d7fb109f79e87061688ba70f3bd7" , target="_blank">Report Link</a>
+						<br><br>
+						<p> The lock cond_mutex should guard dbus_startup_completed to make the write operation atomic.</p>
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+					<li style="display:none" projname="keepalived" bugtype="667">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/keepalived.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/667.html">CWE-667: Improper Locking</a> |
+						<a href="https://github.com/acassen/keepalived/commit/7245f452fe33de7a026f92279fc9499529c3ffeb" , target="_blank">Report Link</a>
+						<br><br>
+						<p>A communication deadlock bug between the signal (Line 700) and wait sites (Line 996).</p>
+
+						<br><br>
+					</div>
+					<br clear=all><br>
+				</li>
+				<li style="display:none" projname="rsyslog" bugtype="362">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/rsyslog.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+						<a href="https://github.com/rsyslog/rsyslog/commit/dc395fec5da011014a15d885286138b4e35468c3" , target="_blank">Report Link</a>
+						<br><br>
+						<p> That code evolved from running on a single thread to running on multiple threads, which introduced data races and so made unreliable.</p>
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+				<li style="display:none" projname="leveldb" bugtype="362">
+					<div style="float: left; height: 150px; margin-right: 1cm;">
+						<img src="/static/leveldb.png" width="150px" />
+					</div>
+					<div style="width: 1000px">
+						<a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362: Data Race</a> |
+						<a href="https://github.com/google/leveldb/issues/499" , target="_blank">Report Link</a>
+						<br><br>
+						<p> A potential data races when accessing variable stderr in the function PthreadCall.</p>
+						<br><br>
+					</div>
+					<br clear="all"><br>
+				</li>
+
 
 
 			</ul>
