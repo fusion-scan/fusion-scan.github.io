@@ -1,6 +1,6 @@
 # fusion-scan.github.io
 
-We collect the bugs detected by our static code analyzers, Pinpoint and Fusion, in this website.
+We collect the bugs detected by our static code analyzers, Pinpoint (PLDI 2018) and Fusion (PLDI 2021), in this website.
 
 
 ## Add a new bug into the list
