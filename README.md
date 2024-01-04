@@ -1,44 +1,27 @@
-# fusion-scan.github.io
+### Bug Report
 
-We collect the bugs detected by our static code analyzers, Pinpoint (PLDI 2018) and Fusion (PLDI 2021), in this website.
+This page lists all bug reports by libalchemy
 
-
-## Add a new bug into the list
-
-To add a new bug, create a pull request by adding one item like the following (you need to replace ${...} with text):
-
-```
-<li projname="${project name}" bugtype="${cwe id}">
-    <div style="float: left; height: 150px; margin-right: 1cm;">
-        <img src="${logo url}" width="150px"/>
-    </div>
-    <div style="width: 1000px">
-        <a href="https://cwe.mitre.org/data/definitions/${cwe id}.html">CWE-${cwe id}: ${cwe description}</a> |
-        <a href="${bug report link}", target="_blank">Report Link</a>
-        <br><br>
-        <p>${description of the bug}</p>
-        <br><br>
-    </div>
-    <br clear=all><br>
-</li>
-```
-
-An example:
-
-```
-<li projname="apache" bugtype="562">
-    <div style="float: left; height: 150px; margin-right: 1cm;">
-        <img src="/static/apache.png" width="150px"/>
-    </div>
-    <div style="width: 1000px">
-        <a href="https://cwe.mitre.org/data/definitions/562.html">CWE-562: Return of Stack Address</a> |
-        <a href="https://bz.apache.org/bugzilla/show_bug.cgi?id=61228", target="_blank">Report Link</a>
-        <br><br>
-        <p>An Invalid Reference to Stack Memory (modules/http/chunk_filters.c).</p>
-        <br><br>
-    </div>
-    <br clear=all><br>
-</li>
-```
-
-
+| project   | issue                                                      | description                                              | CVE-ID
+| --------- | -----------------------------------------------------------| -------------------------------------------------------- | ------------------------------------------------------------
+| binutils  | https://sourceware.org/bugzilla/show_bug.cgi?id=29254      | one site may occur memory leak                           |CVE-2022-47007
+| binutils  | https://sourceware.org/bugzilla/show_bug.cgi?id=29255      | two sites may occur memory leak                          |CVE-2022-47008
+| binutils  | https://sourceware.org/bugzilla/show_bug.cgi?id=29256      | two sites may occur memory leak                          |
+| binutils  | https://sourceware.org/bugzilla/show_bug.cgi?id=29261      | one site may occur memory leak                           |CVE-2022-47011
+| binutils  | https://sourceware.org/bugzilla/show_bug.cgi?id=29262      | one site may occur memory leak                           |CVE-2022-47010
+| libsdl    | https://github.com/libsdl-org/SDL-1.2/issues/863           | one site may occur use after free                        |CVE-2022-34568
+| dynamiips | https://github.com/GNS3/dynamips/issues/125                | two sites may occur use of uninitialized variable        |CVE-2022-47012
+| openldap  | https://bugs.openldap.org/show_bug.cgi?id=9904             | six sites may occur null pointer dereference             |CVE-2023-2953
+| openssl   | https://github.com/openssl/openssl/issues/19050            | twenty-one sites may occur null pointer dereference      |
+| vim       | https://github.com/vim/vim/issues/11020                    | one site may occur null pointer dereference              |CVE-2022-47024
+| libsndfile| https://github.com/open-mpi/hwloc/issues/544               | three sites may occur null pointer dereference           |
+| hwloc     | https://bugs.openldap.org/show_bug.cgi?id=9904             | five sites may occur null pointer dereference            |CVE-2022-47022
+| opusfile  | https://github.com/xiph/opusfile/issues/36                 | five sites may occur null pointer dereference            |CVE-2022-47021
+| vlc       | https://code.videolan.org/videolan/vlc/-/issues/27319      | one site may occur null pointer dereference              |
+| libxi     | https://gitlab.freedesktop.org/xorg/lib/libxi/-/issues/14  | one site may occur null pointer dereference              |
+| libshout  | https://gitlab.xiph.org/xiph/icecast-server/-/issues/2450  | one site may occur null pointer dereference              |
+| libshout  | https://gitlab.xiph.org/xiph/icecast-server/-/issues/2451  | one site may occur null pointer dereference              |
+| tmux      | https://github.com/tmux/tmux/issues/3312                   | one site may occur null pointer dereference              |
+| mariadb   | https://jira.mariadb.org/browse/MDEV-29644                 | one site may occur null pointer dereference              |CVE-2022-47015
+| mariadb   | https://jira.mariadb.org/browse/MDEV-29643                 | one site may occur null pointer dereference              |
+| mariadb   | https://jira.mariadb.org/browse/MDEV-29881                 | one site may occur null pointer dereference              |
